@@ -8,7 +8,7 @@ CREATE OR REPLACE FUNCTION citas_usuario(varchar)
     AS
 $$
 DECLARE
-	initcap(nombre) ALIAS FOR $1;
+	nombre ALIAS FOR $1;
 BEGIN
     RETURN query SELECT usuario_nombre, usuario_dos, cita_fecha
 	FROM USUARIOCITA
